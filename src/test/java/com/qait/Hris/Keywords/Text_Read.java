@@ -48,6 +48,7 @@ public class Text_Read {
 			e.printStackTrace();
 
 		}
+		System.out.println(deviceList);
 		return deviceList;
 	}
 

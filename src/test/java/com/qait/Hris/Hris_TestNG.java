@@ -1,5 +1,7 @@
 package com.qait.Hris;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import org.openqa.selenium.WebDriver;
@@ -18,6 +20,18 @@ public class Hris_TestNG {
 	
 @BeforeClass
 public void values() {
+	File f = new File("src" + File.separator + "test" + File.separator + "resources" + File.separator + "TestData"
+			+ File.separator + "Item-details.csv");
+	
+	if(f.exists()){
+		f.delete();
+		try {
+			f.createNewFile();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	driver = myDriver_class.setup(); 
 	myKeywords_class.login(driver);
 	myKeywords_class.glpi(driver);

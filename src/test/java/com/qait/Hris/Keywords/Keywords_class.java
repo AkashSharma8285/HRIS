@@ -34,7 +34,7 @@ public class Keywords_class {
 	}
 	
 	public void details(WebDriver driver){
-		List<WebElement> eleList =  driver.findElements(By.xpath("//option[contains(@title,'GLPI ID')]"));
+		List<WebElement> eleList =  driver.findElements(By.xpath("//select[@id='item-id']/option"));
 		HashMap<String, String> deviceList = new HashMap<String, String>();
 		int count = 1;
 		for (WebElement each:eleList){
