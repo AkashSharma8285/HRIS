@@ -34,6 +34,7 @@ public void values() {
 	}
 	driver = myDriver_class.setup(); 
 	myKeywords_class.login(driver);
+	
 	myKeywords_class.glpi(driver);
 	myKeywords_class.details(driver);
 	driver.quit();

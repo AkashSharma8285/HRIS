@@ -21,7 +21,13 @@ public class Keywords_class {
 		driver.findElement(By.xpath(".//*[@id='txtPassword']")).sendKeys("akash_sharma8");
 		driver.findElement(By.name("Submit")).click();
 	}
-
+	
+	public void checkHomePage(WebDriver driver){
+		if(!driver.getTitle().equals("QAIT HRIS")){
+			driver.findElement(By.xpath("//ul[@class='nav navbar-nav navbar-right']//i[@class='fa fa-chevron-left fa-2x']")).click();
+			System.out.println("navigate to home page");
+		}
+	}
 	public void glpi(WebDriver driver){
 	driver.findElement(By.xpath("//a[@class='otherTab' and text()='GLPI']")).click();  
 	driver.findElement(By.xpath("//a[text()='My Reservations']")).click();
