@@ -17,8 +17,8 @@ public class Keywords_class {
 	public void login(WebDriver driver) {
 		driver.get("http://10.0.1.61/qaithris/login.php");
 		driver.findElement(By.xpath(".//*[@id='demo-2']/div/div[2]/ul/li[1]/a")).click();
-		driver.findElement(By.xpath(".//*[@id='txtUserName']")).sendKeys("akashsharma");
-		driver.findElement(By.xpath(".//*[@id='txtPassword']")).sendKeys("akash_sharma8");
+		driver.findElement(By.xpath(".//*[@id='txtUserName']")).sendKeys("parasahi");
+		driver.findElement(By.xpath(".//*[@id='txtPassword']")).sendKeys("ihU@247");
 		driver.findElement(By.name("Submit")).click();
 	}
 	
